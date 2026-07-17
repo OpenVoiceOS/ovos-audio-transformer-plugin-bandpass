@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-audio-transformer-plugin-bandpass"
+dynamic = ["version"]
+description = "Band-pass filter audio transformer for OpenVoiceOS"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [{ name = "JarbasAi", email = "jarbasai@mailfence.com" }]
+keywords = ["ovos", "plugin", "audio", "transformer", "stt", "dsp"]
+dependencies = [
+    "numpy",
+    "scipy>=1.10",
+    "ovos-plugin-manager>=0.5.0,<3.0.0",
+    "ovos-utils>=0.3.0,<1.0.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-audio-transformer-plugin-bandpass"
+
+[project.entry-points."opm.transformer.audio"]
+"ovos-audio-transformer-plugin-bandpass" = "ovos_bandpass_transformer:BandpassAudioTransformer"
+
+[tool.setuptools]
+packages = ["ovos_bandpass_transformer"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { attr = "ovos_bandpass_transformer.version.__version__" }
