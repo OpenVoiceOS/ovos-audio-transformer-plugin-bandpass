@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.2a2](https://github.com/OpenVoiceOS/ovos-audio-transformer-plugin-bandpass/tree/0.0.2a2) (2026-09-01)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-audio-transformer-plugin-bandpass/compare/0.0.2a1...0.0.2a2)
+
+**Merged pull requests:**
+
+- docs: rewrite README in Simplified Technical English [\#4](https://github.com/OpenVoiceOS/ovos-audio-transformer-plugin-bandpass/pull/4) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.0.2a1](https://github.com/OpenVoiceOS/ovos-audio-transformer-plugin-bandpass/tree/0.0.2a1) (2026-07-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-audio-transformer-plugin-bandpass/compare/0.0.1...0.0.2a1)
