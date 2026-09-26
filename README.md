@@ -19,8 +19,8 @@ pip install ovos-audio-transformer-plugin-bandpass
 
 ## Configure
 
-Enable it in `mycroft.conf` under `audio_transformers` (any component that runs
-the audio-transformer pipeline — the listener, or the STT server — will apply it):
+Enable it in `mycroft.conf` under `audio_transformers`. Any component that runs
+the audio-transformer pipeline, such as the listener or the STT server, applies it:
 
 ```json
 {
@@ -39,8 +39,17 @@ the audio-transformer pipeline — the listener, or the STT server — will appl
 |--------|---------|---------|
 | `low_hz` | `300` | Lower edge of the pass-band, in Hz. |
 | `high_hz` | `3400` | Upper edge of the pass-band, in Hz. |
-| `order` | `4` | Butterworth filter order; higher is a steeper roll-off. |
+| `order` | `4` | Butterworth filter order. Higher is a steeper roll-off. |
 | `sample_rate` | `16000` | Sample rate of the incoming PCM audio, in Hz. |
 
 Edges are clamped into the open interval below Nyquist, so an aggressive band on a
 low sample rate degrades gracefully instead of failing.
+
+## Related projects
+
+- [OpenVoiceOS/ovos-plugin-manager](https://github.com/OpenVoiceOS/ovos-plugin-manager): loads audio transformer plugins through the `opm.transformer.audio` entry point.
+- [OpenVoiceOS/ovos-audio-transformer-plugin-speechbrain-langdetect](https://github.com/OpenVoiceOS/ovos-audio-transformer-plugin-speechbrain-langdetect): another audio transformer plugin, for language detection.
+
+## License
+
+Apache-2.0. See [LICENSE](LICENSE).
